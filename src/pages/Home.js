@@ -1,23 +1,20 @@
+import styled from "styled-components";
+import "../assets/styles/index.css";
+import Header from "../components/Header";
+
 import data from "../constants/data";
+
+const HomeContainer = styled.div`
+  background-color: ${(props) => props.theme.mainBackground};
+  color: white;
+`;
 
 function Home() {
   return (
-    <div>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HomeContainer>
+      <Header data={data.header}></Header>
+    </HomeContainer>
   );
 }
 
-export default App;
+export default Home;

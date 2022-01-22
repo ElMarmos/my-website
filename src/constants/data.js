@@ -1,4 +1,4 @@
-export default {
+const data = {
   navbar: {
     items: [
       "About",
@@ -132,3 +132,5 @@ export default {
     },
   },
 };
+
+export default data;
