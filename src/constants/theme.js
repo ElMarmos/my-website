@@ -3,9 +3,9 @@ const theme = {
   secondary: "#4f3dff",
   primaryBackground: "#05040c",
   secondaryBackground: "#0c0a1f",
-  otherColors: {
+  colors: {
     red: "#ff0086",
-    gold: "ffa316",
+    gold: "#ffa316",
     lightGray: "#a3a0bf",
     green: "#8bce52",
   },

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <path style="fill:none" d="M0 0h32v32H0z"/>
+    <path transform="translate(1.333 1.333)" style="fill:none" d="M0 0h29.333v29.333H0z"/>
+    <path data-name="Trazado 33" d="M23 22.667v2.667H7v-2.667zm4-9.333V16H3v-2.667zM23 4v2.667H7V4z" transform="translate(1 1.333)" style="fill:#fff"/>
+</svg>
