@@ -23,7 +23,7 @@ const TextLink = styled.a`
   color: ${(props) => props.theme.colors.red};
   font-weight: bold;
   font-style: normal;
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
   font-size: 18px;
   text-decoration: none;
 

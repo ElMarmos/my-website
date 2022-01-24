@@ -37,7 +37,7 @@ const Home = () => {
           return (
             <Experience
               key={section.toLowerCase()}
-              items={data.education.items}
+              items={data.experience.items}
               number={idx + 1}
               sectionTitle={section}
             />

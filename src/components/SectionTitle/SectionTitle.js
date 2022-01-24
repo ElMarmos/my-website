@@ -14,7 +14,7 @@ const Caret = styled.img`
 
 const Number = styled.p`
   color: ${(props) => props.theme.colors.lightGray};
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
   font-weight: bold;
   font-size: 14px;
   margin-top: 0;
@@ -23,7 +23,7 @@ const Number = styled.p`
 
 const Title = styled.h1`
   color: ${(props) => props.theme.primary};
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
   font-weight: bold;
   font-size: 28px;
   margin: 0;

@@ -8,7 +8,7 @@ const EducationContainer = styled.section`
 const EducationItem = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
   padding: 16px 0;
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
   font-size: 12px;
   line-height: 20px;
 
