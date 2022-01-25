@@ -143,6 +143,7 @@ const data = {
   contact: {
     text: "Now that you know me, let's build something awesome together!",
     contactBtnTxt: "Say Hello!",
+    email: "alejandromarmolejos@gmail.com",
   },
   general: {
     links: {
