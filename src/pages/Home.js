@@ -6,6 +6,9 @@ import Education from "../components/Education";
 import Experience from "../components/Experience/Experience";
 import data from "../constants/data";
 import { useEffect } from "react";
+import Skills from "../components/Skills";
+import Portfolio from "../components/Portfolio/Portfolio";
+import Contact from "../components/Contact/Contact";
 
 const HomeContainer = styled.div`
   background-color: ${(props) => props.theme.mainBackground};
@@ -42,9 +45,37 @@ const Home = () => {
               sectionTitle={section}
             />
           );
+        } else if (section === "Skills") {
+          return (
+            <Skills
+              key={section.toLowerCase()}
+              items={data.skills.items}
+              number={idx + 1}
+              sectionTitle={section}
+            />
+          );
+        } else if (section === "Portfolio") {
+          return (
+            <Portfolio
+              key={section.toLowerCase()}
+              items={data.portfolio.items}
+              number={idx + 1}
+              sectionTitle={section}
+            />
+          );
+        } else if (section === "Contact") {
+          return (
+            <Contact
+              key={section.toLowerCase()}
+              data={data.contact}
+              links={data.general.links}
+              number={idx + 1}
+              sectionTitle={section}
+            />
+          );
         }
 
-        return <div key={section.toLowerCase()}></div>;
+        return null;
       })}
     </HomeContainer>
   );

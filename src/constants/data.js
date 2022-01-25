@@ -123,7 +123,7 @@ const data = {
       },
       {
         title: "Design",
-        body: "Photoshop, Illustrator, XD, Wireframing",
+        body: "Photoshop, Illustrator, XD, Wireframing.",
       },
     ],
   },
@@ -131,7 +131,12 @@ const data = {
     items: [
       {
         title: "CEPS Engineering",
-        summary: "Developed new website of the company.",
+        summary: "Developed new website of the company",
+        url: "http://www.ceps.com.co/en/home/",
+      },
+      {
+        title: "Restaurant Mar Peruano",
+        summary: "Developed website of the restaurant",
       },
     ],
   },
