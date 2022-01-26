@@ -34,7 +34,7 @@ const PortfolioItem = styled.div`
 `;
 
 const PortfolioImageLink = styled.a`
-  display: inline-block;
+  display: block;
 `;
 
 const PortfolioImage = styled.img`

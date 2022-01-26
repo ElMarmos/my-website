@@ -18,6 +18,17 @@ const ExperienceItemContainer = styled.div`
   &:first-child {
     border-top: 1px solid ${(props) => props.theme.colors.lightGray};
   }
+
+  @media screen and (min-width: 426px) {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "dates position arrow"
+      "dates company arrow"
+      "dates summary summary";
+  }
 `;
 
 const Dates = styled.p`
@@ -25,6 +36,16 @@ const Dates = styled.p`
   margin: 0 0 24px;
   font-size: 12px;
   line-height: 20px;
+
+  @media screen and (min-width: 426px) {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 113px 0 0;
+    grid-area: dates;
+    place-self: center;
+    white-space: nowrap;
+    min-width: 160px;
+  }
 `;
 
 const Position = styled.p`
@@ -33,6 +54,13 @@ const Position = styled.p`
   margin: 0 0 4px;
   font-size: 14px;
   line-height: 24px;
+
+  @media screen and (min-width: 426px) {
+    grid-area: position;
+    align-self: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 const Company = styled.a`
@@ -47,6 +75,21 @@ const Company = styled.a`
   &:hover {
     text-decoration: underline;
   }
+
+  @media screen and (min-width: 426px) {
+    grid-area: company;
+    justify-self: start;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+`;
+
+const ArrowContainer = styled.div`
+  @media screen and (min-width: 426px) {
+    grid-area: arrow;
+    align-self: center;
+  }
 `;
 
 const ArrowButton = styled.button`
@@ -58,10 +101,10 @@ const ArrowButton = styled.button`
 const Arrow = styled.span`
   border-color: ${(props) => props.theme.colors.lightGray}
     ${(props) => props.theme.colors.lightGray} transparent transparent;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   display: inline-block;
   transform: rotate(135deg);
 
@@ -86,6 +129,12 @@ const Summary = styled.p`
       height: auto;
       padding-top: 24px;
     `}
+
+  @media screen and (min-width: 426px) {
+    grid-area: summary;
+    font-size: 14px;
+    line-height: 24px;
+  }
 `;
 
 const ExperienceItem = ({
@@ -116,11 +165,11 @@ const ExperienceItem = ({
       ) : (
         <Company color={index % COLORS.length}>{company}</Company>
       )}
-      <div>
+      <ArrowContainer>
         <ArrowButton onClick={() => setOpen(!open ? index : -1)}>
           <Arrow open={open} />
         </ArrowButton>
-      </div>
+      </ArrowContainer>
       <Summary open={open}>
         {summary.map((item, idx) => (
           <span key={idx}>

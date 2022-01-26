@@ -5,10 +5,24 @@ import ExperienceItem from "./ExperienceItem";
 
 const ExperienceContainer = styled.section`
   padding: 48px 16px;
+
+  @media screen and (min-width: 426px) {
+    padding: 72px 40px;
+  }
+`;
+
+const ExperienceItemsContainer = styled.div`
+  @media screen and (min-width: 680px) {
+    margin-left: 14%;
+  }
 `;
 
 const NewSectionTitle = styled(SectionTitle)`
   margin-bottom: 64px;
+
+  @media screen and (min-width: 426px) {
+    margin-bottom: 104px;
+  }
 `;
 
 const Experience = ({ items, number, sectionTitle }) => {
@@ -17,7 +31,7 @@ const Experience = ({ items, number, sectionTitle }) => {
   return (
     <ExperienceContainer>
       <NewSectionTitle number={number} title={sectionTitle} />
-      <div>
+      <ExperienceItemsContainer>
         {items.map((data, idx) => (
           <ExperienceItem
             {...data}
@@ -27,7 +41,7 @@ const Experience = ({ items, number, sectionTitle }) => {
             key={idx}
           />
         ))}
-      </div>
+      </ExperienceItemsContainer>
     </ExperienceContainer>
   );
 };

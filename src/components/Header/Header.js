@@ -10,6 +10,9 @@ const HeaderContainer = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media screen and (min-width: 426px) {
+    padding: 0 40px;
+  }
 `;
 
 const HeaderText = styled.h1`
@@ -19,8 +22,10 @@ const HeaderText = styled.h1`
   text-align: center;
   max-width: 248px;
 
-  @media screen and (min-width: 376px) {
-    max-width: 100%;
+  @media screen and (min-width: 426px) {
+    max-width: 688px;
+    font-size: 32px;
+    line-height: 40px;
   }
 `;
 
@@ -35,6 +40,10 @@ const ArrowDownImg = styled.img`
   left: 19px;
   bottom: 48px;
   height: 48px;
+
+  @media screen and (min-width: 426px) {
+    left: 40px;
+  }
 `;
 
 const ButtonLinksContainer = styled.div`

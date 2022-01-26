@@ -7,6 +7,10 @@ const AboutContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 426px) {
+    padding: 144px 40px 72px;
+  }
 `;
 
 const Text = styled.h2`
@@ -17,6 +21,13 @@ const Text = styled.h2`
   max-width: 248px;
   margin: 0;
   margin-bottom: 56px;
+
+  @media screen and (min-width: 426px) {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 600px;
+    margin-bottom: 80px;
+  }
 `;
 
 const TextLink = styled.a`
@@ -30,6 +41,10 @@ const TextLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+
+  @media screen and (min-width: 426px) {
+    font-size: 20px;
+  }
 `;
 
 const MyImageContainer = styled.div`
@@ -38,11 +53,15 @@ const MyImageContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media screen and (min-width: 426px) {
+    height: 280px;
+    width: 382px;
+  }
 `;
 
 const MyImage = styled.img`
-  height: 182px;
-  width: 182px;
+  height: 100%;
   background-color: ${(props) => props.theme.primary};
   z-index: 1;
 `;
@@ -50,13 +69,17 @@ const MyImage = styled.img`
 const ImageDecorationLeft = styled.div`
   height: 0;
   width: 0;
-  border-width: 45px 0 0 33px;
+  border-width: 70px 0 0 51px;
   border-style: solid;
   border-color: transparent;
   border-top-color: ${(props) => props.theme.secondary};
   position: absolute;
   left: 0;
   top: 10px;
+
+  @media screen and (min-width: 426px) {
+    top: 35px;
+  }
 `;
 
 const ImageDecorationRight = styled(ImageDecorationLeft)`
@@ -66,7 +89,11 @@ const ImageDecorationRight = styled(ImageDecorationLeft)`
   bottom: 10px;
   border-top-color: transparent;
   border-bottom-color: ${(props) => props.theme.secondary};
-  border-width: 0 33px 45px 0;
+  border-width: 0 51px 70px 0;
+
+  @media screen and (min-width: 426px) {
+    bottom: 35px;
+  }
 `;
 
 const About = ({ data }) => {
