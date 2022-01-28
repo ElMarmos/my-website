@@ -5,10 +5,6 @@ const SectionTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (min-width: 426px) {
-    flex-direction: row;
-  }
 `;
 
 const Caret = styled.img`
@@ -16,9 +12,7 @@ const Caret = styled.img`
   margin-bottom: 8px;
 
   @media screen and (min-width: 426px) {
-    transform: rotate(-90deg);
-    margin-bottom: 0;
-    margin-right: 5px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -31,8 +25,7 @@ const Number = styled.p`
   margin-bottom: 8px;
 
   @media screen and (min-width: 426px) {
-    margin-bottom: 0;
-    margin-right: 8px;
+    margin-bottom: 16px;
     font-size: 16px;
   }
 `;
@@ -51,7 +44,7 @@ const Title = styled.h1`
   }
 `;
 
-const SectionTitle = ({ className, number, title }) => {
+const ContactSectionTitle = ({ className, number, title }) => {
   return (
     <SectionTitleContainer className={className}>
       <Caret src={CaretIcon} />
@@ -61,4 +54,4 @@ const SectionTitle = ({ className, number, title }) => {
   );
 };
 
-export default SectionTitle;
+export default ContactSectionTitle;
