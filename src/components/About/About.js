@@ -11,6 +11,11 @@ const AboutContainer = styled.section`
   @media screen and (min-width: 426px) {
     padding: 144px 40px 72px;
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 160px 119px 80px;
+    flex-direction: row;
+  }
 `;
 
 const Text = styled.h2`
@@ -28,6 +33,15 @@ const Text = styled.h2`
     max-width: 600px;
     margin-bottom: 80px;
   }
+
+  @media screen and (min-width: 992px) {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: left;
+    max-width: 648px;
+    margin-bottom: 0;
+    margin-right: 97px;
+  }
 `;
 
 const TextLink = styled.a`
@@ -44,6 +58,10 @@ const TextLink = styled.a`
 
   @media screen and (min-width: 426px) {
     font-size: 20px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 24px;    
   }
 `;
 

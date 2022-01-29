@@ -21,6 +21,12 @@ const PortfolioContainer = styled.section`
   @media screen and (min-width: 426px) {
     padding: 72px 40px;
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 80px 119px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
 `;
 
 const NewSectionTitle = styled(SectionTitle)`
@@ -28,6 +34,10 @@ const NewSectionTitle = styled(SectionTitle)`
 
   @media screen and (min-width: 426px) {
     margin-bottom: 104px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 120px;
   }
 `;
 
@@ -39,6 +49,11 @@ const PortfolioItemsContainer = styled.div`
   @media screen and (min-width: 426px) {
     grid-row-gap: 88px;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 88px 24px;
   }
 `;
 
@@ -76,6 +91,11 @@ const PortfolioSummary = styled.p`
     font-size: 16px;
     margin-bottom: 8px;
   }
+
+  @media screen and (min-width: 992px) {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
 `;
 
 const PortfolioTitle = styled.h4`
@@ -83,6 +103,7 @@ const PortfolioTitle = styled.h4`
   margin: 0;
   font-size: 16px;
   line-height: 28px;
+  font-weight: 600;
 
   @media screen and (min-width: 426px) {
     font-size: 18px;

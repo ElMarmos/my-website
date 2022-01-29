@@ -24,6 +24,20 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     height: 100%;
+    scroll-behavior: smooth;
+
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${(props) => props.theme.primary};
+      border-radius: 2px;
+    }
   }
 
   body {

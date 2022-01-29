@@ -96,6 +96,10 @@ const ArrowButton = styled.button`
   background-color: transparent;
   border: none;
   padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Arrow = styled.span`

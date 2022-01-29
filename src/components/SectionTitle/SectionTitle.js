@@ -20,6 +20,10 @@ const Caret = styled.img`
     margin-bottom: 0;
     margin-right: 5px;
   }
+
+  @media screen and (min-width: 992px) {
+    margin-right: 8px;
+  }
 `;
 
 const Number = styled.p`
@@ -48,6 +52,11 @@ const Title = styled.h1`
   @media screen and (min-width: 426px) {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 40px;
+    line-height: 48px;
   }
 `;
 

@@ -1,16 +1,38 @@
 import styled from "styled-components";
 import ContactSectionTitle from "./ContactSectionTitle";
-import triangleUp from "../../assets/images/triangle_up.svg";
-import triangleDown from "../../assets/images/triangle_down.svg";
+import triangleUpSm from "../../assets/images/triangle_up_sm.svg";
+import triangleDownSm from "../../assets/images/triangle_down_sm.svg";
+import triangleUpMd from "../../assets/images/triangle_up_md.svg";
+import triangleDownMd from "../../assets/images/triangle_down_md.svg";
+import triangleUpLg from "../../assets/images/triangle_up_lg.svg";
+import triangleDownLg from "../../assets/images/triangle_down_lg.svg";
 import ButtonLink from "../Header/ButtonLink";
 import logo from "../../assets/images/logo.svg";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const ContactContainer = styled.section`
   padding: 48px 0 40px;
+
+  @media screen and (min-width: 426px) {
+    padding: 72px 0 56px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 80px 0;
+  }
+`;
+
+const ContactInnerContainer = styled.div`
   text-align: center;
 
   @media screen and (min-width: 426px) {
-    padding: 72px 40px 56px;
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 0 119px;
+    max-width: 1366px;
+    margin: 0 auto;
   }
 `;
 
@@ -20,11 +42,16 @@ const NewContactSectionTitle = styled(ContactSectionTitle)`
   @media screen and (min-width: 426px) {
     margin-bottom: 24px;
   }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 32px;
+  }
 `;
 
 const ContactDecorationContainer = styled.div`
   align-items: center;
-  height: 106px;
+  box-sizing: border-box;
+  height: 181px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -32,9 +59,13 @@ const ContactDecorationContainer = styled.div`
   padding: 38px 0;
 
   @media screen and (min-width: 426px) {
-    margin: 0 -40px;
-    height: 216px;
+    height: 368px;
     padding: 76px 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 650px;
+    padding: 120px 0;
   }
 `;
 
@@ -75,6 +106,13 @@ const Text = styled.div`
     font-size: 20px;
     line-height: 28px;
   }
+
+  @media screen and (min-width: 992px) {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 360px;
+    margin: 0 auto 56px;
+  }
 `;
 
 const ContactButton = styled.a`
@@ -92,6 +130,10 @@ const ContactButton = styled.a`
 
   @media screen and (min-width: 426px) {
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 184px;
   }
 `;
 
@@ -113,7 +155,21 @@ const ButtonLinksContainer = styled.div`
   grid-template-columns: auto auto;
   grid-column-gap: 16px;
   bottom: 48px;
+
+  @media screen and (min-width: 992px) {
+    grid-column-gap: 24px;
+  }
 `;
+
+const selectTriangleImage = (width, orientation = "up") => {
+  if (width >= 992) {
+    return orientation === "down" ? triangleDownLg : triangleUpLg;
+  } else if (width >= 426) {
+    return orientation === "down" ? triangleDownMd : triangleUpMd;
+  }
+
+  return orientation === "down" ? triangleDownSm : triangleUpSm;
+};
 
 const Contact = ({
   number,
@@ -121,29 +177,33 @@ const Contact = ({
   data: { text, contactBtnTxt, email },
   links: { github, linkedin },
 }) => {
+  const size = useWindowSize();
+
   return (
     <ContactContainer>
       <ContactDecorationContainer>
         <LeftTriangleContainer>
-          <TriangleImage src={triangleUp} />
+          <TriangleImage src={selectTriangleImage(size.width)} />
         </LeftTriangleContainer>
         <RightTriangleContainer>
-          <TriangleImage src={triangleDown} />
+          <TriangleImage src={selectTriangleImage(size.width, "down")} />
         </RightTriangleContainer>
         <Line />
       </ContactDecorationContainer>
-      <NewContactSectionTitle number={number} title={sectionTitle} />
-      <Text>{text}</Text>
-      <ContactButton href={`mailto:${email}`}>{contactBtnTxt}</ContactButton>
-      <LogoContainer>
-        <Logo src={logo} alt="" />
-      </LogoContainer>
-      <BLCont>
-        <ButtonLinksContainer>
-          <ButtonLink href={github} target="_blank" />
-          <ButtonLink type="linkedin" href={linkedin} target="_blank" />
-        </ButtonLinksContainer>
-      </BLCont>
+      <ContactInnerContainer>
+        <NewContactSectionTitle number={number} title={sectionTitle} />
+        <Text>{text}</Text>
+        <ContactButton href={`mailto:${email}`}>{contactBtnTxt}</ContactButton>
+        <LogoContainer>
+          <Logo src={logo} alt="" />
+        </LogoContainer>
+        <BLCont>
+          <ButtonLinksContainer>
+            <ButtonLink href={github} target="_blank" />
+            <ButtonLink type="linkedin" href={linkedin} target="_blank" />
+          </ButtonLinksContainer>
+        </BLCont>
+      </ContactInnerContainer>
     </ContactContainer>
   );
 };

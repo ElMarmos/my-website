@@ -28,6 +28,10 @@ const Number = styled.p`
     margin-bottom: 16px;
     font-size: 16px;
   }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 8px;
+  }
 `;
 
 const Title = styled.h1`
@@ -41,6 +45,11 @@ const Title = styled.h1`
   @media screen and (min-width: 426px) {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 40px;
+    line-height: 48px;
   }
 `;
 

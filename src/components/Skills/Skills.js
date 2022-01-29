@@ -11,6 +11,12 @@ const SkillsContainer = styled.section`
   @media screen and (min-width: 426px) {
     padding: 72px 40px;
   }
+
+  @media screen and (min-width: 992px) {
+    padding: 80px 119px;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
 `;
 
 const NewSectionTitle = styled(SectionTitle)`
@@ -18,6 +24,10 @@ const NewSectionTitle = styled(SectionTitle)`
 
   @media screen and (min-width: 426px) {
     margin-bottom: 104px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 120px;
   }
 `;
 
@@ -31,6 +41,12 @@ const SkillItemsContainer = styled.div`
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 24px;
   }
 `;
 
@@ -48,6 +64,11 @@ const SkillImage = styled.img`
   @media screen and (min-width: 426px) {
     height: 88px;
     width: 88px;
+  }
+
+  @media screen and (min-width: 992px) {
+    height: 96px;
+    width: 96px;
   }
 `;
 

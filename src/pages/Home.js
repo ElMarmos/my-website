@@ -20,7 +20,6 @@ const Home = () => {
   useEffect(() => {
     ReactGA.initialize("G-Z7TXXF4WYK");
   }, []);
-
   return (
     <HomeContainer>
       <Header data={data.header} links={data.general.links} />
