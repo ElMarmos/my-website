@@ -147,7 +147,7 @@ const data = {
   },
   general: {
     links: {
-      github: "https://github.com/elmarmos",
+      github: "https://github.com/ElMarmos/my-website",
       linkedin: "https://www.linkedin.com/in/alejandromarmolejo/",
     },
   },
