@@ -17,7 +17,11 @@ const HomeContainer = styled.div`
 
 const Home = ({ data }) => {
   useEffect(() => {
-    ReactGA.initialize("G-Z7TXXF4WYK");
+    if (process.env.NODE_ENV === "production") {
+      ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+    }
+
+    console.log(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
   }, []);
   return (
     <HomeContainer>
