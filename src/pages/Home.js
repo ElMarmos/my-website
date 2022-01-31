@@ -20,8 +20,6 @@ const Home = ({ data }) => {
     if (process.env.NODE_ENV === "production") {
       ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
     }
-
-    console.log(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
   }, []);
   return (
     <HomeContainer>

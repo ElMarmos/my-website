@@ -1,6 +1,7 @@
 # Alejandro Marmolejo's Website
 
 ## ✅ Last build
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02ac79a2-6142-4d57-9c78-15c338140f77/deploy-status)](https://app.netlify.com/sites/alejandromarmolejo/deploys)
 
 ## 🔔 About this project
