@@ -77,11 +77,11 @@ const NewSectionTitle = styled(SectionTitle)`
   }
 `;
 
-const Experience = ({ items, number, sectionTitle }) => {
+const Experience = ({ items, number, sectionTitle, ...rest }) => {
   const [open, setOpen] = useState(0);
 
   return (
-    <ExperienceContainer>
+    <ExperienceContainer {...rest}>
       <ResponsiveContainerMod>
         <NewSectionTitle number={number} title={sectionTitle} />
       </ResponsiveContainerMod>

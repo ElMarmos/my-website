@@ -61,7 +61,7 @@ const TextLink = styled.a`
   }
 
   @media screen and (min-width: 992px) {
-    font-size: 24px;    
+    font-size: 24px;
   }
 `;
 
@@ -114,9 +114,9 @@ const ImageDecorationRight = styled(ImageDecorationLeft)`
   }
 `;
 
-const About = ({ data }) => {
+const About = ({ data, ...rest }) => {
   return (
-    <AboutContainer>
+    <AboutContainer {...rest}>
       <Text>
         {data.text[0]}
         <TextLink href={data.twilioUrl} target="_blank">

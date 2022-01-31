@@ -176,11 +176,12 @@ const Contact = ({
   sectionTitle,
   data: { text, contactBtnTxt, email },
   links: { github, linkedin },
+  ...rest
 }) => {
   const size = useWindowSize();
 
   return (
-    <ContactContainer>
+    <ContactContainer {...rest}>
       <ContactDecorationContainer>
         <LeftTriangleContainer>
           <TriangleImage src={selectTriangleImage(size.width)} />

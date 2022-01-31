@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Education from "../components/Education";
 import Experience from "../components/Experience/Experience";
-import data from "../constants/data";
 import { useEffect } from "react";
 import Skills from "../components/Skills";
 import Portfolio from "../components/Portfolio/Portfolio";
@@ -16,20 +15,27 @@ const HomeContainer = styled.div`
   font-family: "Approach";
 `;
 
-const Home = () => {
+const Home = ({ data }) => {
   useEffect(() => {
     ReactGA.initialize("G-Z7TXXF4WYK");
   }, []);
   return (
     <HomeContainer>
-      <Header data={data.header} links={data.general.links} />
+      <Header
+        data={data.header}
+        links={data.general.links}
+        navbarItems={data.navbar.items}
+      />
       {data.navbar.items.map((section, idx) => {
         if (section === "About") {
-          return <About key={section.toLowerCase()} data={data.about} />;
+          return (
+            <About key={section.toLowerCase()} id={section} data={data.about} />
+          );
         } else if (section === "Education") {
           return (
             <Education
               key={section.toLowerCase()}
+              id={section}
               items={data.education.items}
               number={idx + 1}
               sectionTitle={section}
@@ -39,6 +45,7 @@ const Home = () => {
           return (
             <Experience
               key={section.toLowerCase()}
+              id={section}
               items={data.experience.items}
               number={idx + 1}
               sectionTitle={section}
@@ -48,6 +55,7 @@ const Home = () => {
           return (
             <Skills
               key={section.toLowerCase()}
+              id={section}
               items={data.skills.items}
               number={idx + 1}
               sectionTitle={section}
@@ -57,6 +65,7 @@ const Home = () => {
           return (
             <Portfolio
               key={section.toLowerCase()}
+              id={section}
               items={data.portfolio.items}
               number={idx + 1}
               sectionTitle={section}
@@ -66,6 +75,7 @@ const Home = () => {
           return (
             <Contact
               key={section.toLowerCase()}
+              id={section}
               data={data.contact}
               links={data.general.links}
               number={idx + 1}

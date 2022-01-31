@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import ArrowDown from "../../assets/images/arrow_down.svg";
+import StaticNavbar from "../Navbar/StaticNavbar";
 import ButtonLink from "./ButtonLink";
 
 const HeaderContainer = styled.section`
   background-color: ${(props) => props.theme.secondaryBackground};
   height: 100vh;
   padding: 0 19px;
+  position: relative;
 
   @media screen and (min-width: 426px) {
     padding: 0 40px;
@@ -83,11 +85,12 @@ const ButtonLinksContainer = styled.div`
   }
 `;
 
-function Header({ data, links }) {
+function Header({ data, links, navbarItems }) {
   const { firstRow, secondRow } = data;
 
   return (
     <HeaderContainer>
+      <StaticNavbar items={navbarItems} />
       <HeaderContainerMax>
         <HeaderTextContainer>
           <HeaderText>

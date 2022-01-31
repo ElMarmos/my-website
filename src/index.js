@@ -6,6 +6,8 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import "./assets/styles/index.css";
 import ApproachRegularOTF from "./assets/fonts/Approach/Approach-Regular.otf";
 import ApproachBoldOTF from "./assets/fonts/Approach/Approach-Bold.otf";
+import Navbar from "./components/Navbar";
+import data from "./constants/data";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -50,7 +52,8 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Home />
+      <Navbar items={data.navbar.items} />
+      <Home data={data} />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

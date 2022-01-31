@@ -111,9 +111,9 @@ const PortfolioTitle = styled.h4`
   }
 `;
 
-const Portfolio = ({ number, sectionTitle, items }) => {
+const Portfolio = ({ number, sectionTitle, items, ...rest }) => {
   return (
-    <PortfolioContainer>
+    <PortfolioContainer {...rest}>
       <NewSectionTitle number={number} title={sectionTitle} />
       <PortfolioItemsContainer>
         {items.map(({ title, summary, url }, idx) => (

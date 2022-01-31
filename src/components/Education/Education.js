@@ -125,9 +125,9 @@ const Dates = styled.span`
   }
 `;
 
-const Education = ({ items, number, sectionTitle }) => {
+const Education = ({ items, number, sectionTitle, ...rest }) => {
   return (
-    <EducationContainer>
+    <EducationContainer {...rest}>
       <TriangleImage src={triangleImage} alt="" />
       <ResponsiveContainer>
         <NewSectionTitle number={number} title={sectionTitle} />

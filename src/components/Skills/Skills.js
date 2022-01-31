@@ -112,9 +112,9 @@ const renderImage = (number) => {
   }
 };
 
-const Skills = ({ number, sectionTitle, items }) => {
+const Skills = ({ number, sectionTitle, items, ...rest }) => {
   return (
-    <SkillsContainer>
+    <SkillsContainer {...rest}>
       <NewSectionTitle number={number} title={sectionTitle} />
       <SkillItemsContainer>
         {items.map(({ title, body }, idx) => (

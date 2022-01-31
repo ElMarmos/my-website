@@ -1,0 +1,6 @@
+<svg data-name="Buttons / FAB" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="20" style="fill:#00ffd2"/>
+    <path style="fill:none" d="M0 0h24v24H0z" transform="translate(8 8)"/>
+    <path transform="translate(9.005 9.005)" style="fill:none" d="M0 0h22.112v22.112H0z"/>
+    <path data-name="Trazado 33" d="M18.076 18.071v2.01H6.015v-2.01zm3.015-7.036v2.01H3v-2.01zM18.076 4v2.01H6.015V4z" transform="translate(8.015 8.02)" style="fill:#05040c"/>
+</svg>
