@@ -161,6 +161,13 @@ const ButtonLinksContainer = styled.div`
   }
 `;
 
+const DevelopedBy = styled.p`
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  margin-top: 70px;
+  margin-bottom: 0;
+`;
+
 const selectTriangleImage = (width, orientation = "up") => {
   if (width >= 992) {
     return orientation === "down" ? triangleDownLg : triangleUpLg;
@@ -204,6 +211,7 @@ const Contact = ({
             <ButtonLink type="linkedin" href={linkedin} target="_blank" />
           </ButtonLinksContainer>
         </BLCont>
+        <DevelopedBy>Developed by Alejandro Marmolejo</DevelopedBy>
       </ContactInnerContainer>
     </ContactContainer>
   );
