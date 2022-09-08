@@ -20,11 +20,11 @@ const data = {
   },
   about: {
     text: [
-      "I'm a Software Engineer specializing in design and development of APIs and building an awesome user experience through front end development. I am now building backend services at ",
-      "Twilio",
-      ".",
+      "I'm a Software Engineer specializing in design and development of APIs and building an awesome user experience through front end development. I am now working as a full stack developer at ",
+      "Haufe Group",
+      " in Barcelona.",
     ],
-    twilioUrl: "https://www.twilio.com/",
+    twilioUrl: "https://www.haufegroup.com/",
   },
   education: {
     items: [
@@ -42,8 +42,18 @@ const data = {
   experience: {
     items: [
       {
-        from: "JUL 2021",
+        from: "JUL 2022",
         to: "PRESENT",
+        position: "Software Engineer",
+        company: "Haufe Group - Barcelona",
+        companyUrl: "https://www.haufegroup.com/",
+        summary: [
+          "As a member of the platform team, I am in charge of developing different modules that other teams can integrate in their projects preventing code duplication and time wasted.",
+        ],
+      },
+      {
+        from: "JUL 2021",
+        to: "JUN 2022",
         position: "Software Engineer",
         company: "Twilio",
         companyUrl: "https://www.twilio.com/",
