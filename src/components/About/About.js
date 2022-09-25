@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MyPhoto from "../../assets/images/picture.jpg";
+import MyPhoto from "../../assets/images/picture.png";
 
 const AboutContainer = styled.section`
   padding: 96px 0 48px;
