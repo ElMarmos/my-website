@@ -20,7 +20,7 @@ const data = {
   },
   about: {
     text: [
-      "I'm a Software Engineer specializing in design and development of APIs and building an awesome user experience through front end development. I am now working as a full stack developer at ",
+      "I'm a Software Engineer specializing in design and development of APIs and building an awesome user experience through front end development. I am now working as a senior software engineer at ",
       "Haufe Group",
       " in Barcelona.",
     ],
@@ -44,11 +44,13 @@ const data = {
       {
         from: "JUL 2022",
         to: "PRESENT",
-        position: "Software Engineer",
+        position: "Senior Software Engineer",
         company: "Haufe Group - Barcelona",
         companyUrl: "https://www.haufegroup.com/",
         summary: [
-          "As a member of the platform team, I am in charge of developing different modules that other teams can integrate in their projects preventing code duplication and time wasted.",
+          "As a member of the platform team, my role is to provide a solid and reliable foundation for developers and users to safely and efficiently use the company's products and services.",
+          "My main task was the development of APIs and React components that allowed our product teams to have a unified way of communicating with shared systems and databases, avoiding code duplication and ensuring that solutions were tested and functioning optimally.",
+          "Other tasks included updating project versions, maintenance, infrastructure migration and updates using Terraform/Terragrunt.",
         ],
       },
       {
