@@ -21,7 +21,7 @@ const data = {
   about: {
     text: [
       "I'm a Software Engineer specializing in design and development of APIs and building an awesome user experience through front end development. I am now working as a senior software engineer at ",
-      "Haufe Group",
+      "Haufe Group Software Solutions Spain SL",
       " in Barcelona.",
     ],
     twilioUrl: "https://www.haufegroup.com/",
@@ -45,7 +45,7 @@ const data = {
         from: "JUL 2022",
         to: "PRESENT",
         position: "Senior Software Engineer",
-        company: "Haufe Group - Barcelona",
+        company: "Haufe Group Software Solutions Spain SL",
         companyUrl: "https://www.haufegroup.com/",
         summary: [
           "As a member of the platform team, my role is to provide a solid and reliable foundation for developers and users to safely and efficiently use the company's products and services.",
@@ -123,15 +123,15 @@ const data = {
     items: [
       {
         title: "Web Development",
-        body: "Javascript, Typescript, JAVA, Node.js, MongoDB, PostgresSQL, MySQL.",
+        body: "Typescript, Java, Node, MongoDB, PostgreSQL, MySQL, Neptune, Jest.",
       },
       {
         title: "Front End Development",
-        body: "HTML, CSS, SASS, React.",
+        body: "HTML, CSS, React, Cypress.",
       },
       {
         title: "Other Technologies",
-        body: "Spring Boot, NestJS, Kafka, Kibana, Electron.",
+        body: "Spring Boot, NestJS, Kafka, Kibana, Electron, Gitlab/Github CI/CD, Terraform/Terragrunt.",
       },
       {
         title: "Design",
