@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import ApproachBoldOTF from "./assets/fonts/Approach/Approach-Bold.otf";
 import ApproachRegularOTF from "./assets/fonts/Approach/Approach-Regular.otf";
-import "./assets/styles/index.css";
 import Navbar from "./components/Navbar";
 import data from "./data/data.json";
 import theme from "./data/theme.json";
