@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Home from "./pages/Home";
-import theme from "./constants/theme";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import "./assets/styles/index.css";
-import ApproachRegularOTF from "./assets/fonts/Approach/Approach-Regular.otf";
 import ApproachBoldOTF from "./assets/fonts/Approach/Approach-Bold.otf";
+import ApproachRegularOTF from "./assets/fonts/Approach/Approach-Regular.otf";
+import "./assets/styles/index.css";
 import Navbar from "./components/Navbar";
-import data from "./constants/data";
+import data from "./data/data.json";
+import theme from "./data/theme.json";
+import Home from "./pages/Home";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -48,13 +48,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-ReactDOM.render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Navbar items={data.navbar.items} />
       <Home data={data} />
     </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </StrictMode>,
 );

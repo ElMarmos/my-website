@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import ContactSectionTitle from "./ContactSectionTitle";
-import triangleUpSm from "../../assets/images/triangle_up_sm.svg";
-import triangleDownSm from "../../assets/images/triangle_down_sm.svg";
-import triangleUpMd from "../../assets/images/triangle_up_md.svg";
-import triangleDownMd from "../../assets/images/triangle_down_md.svg";
-import triangleUpLg from "../../assets/images/triangle_up_lg.svg";
-import triangleDownLg from "../../assets/images/triangle_down_lg.svg";
-import ButtonLink from "../Header/ButtonLink";
 import logo from "../../assets/images/logo.svg";
+import triangleDownLg from "../../assets/images/triangle_down_lg.svg";
+import triangleDownMd from "../../assets/images/triangle_down_md.svg";
+import triangleDownSm from "../../assets/images/triangle_down_sm.svg";
+import triangleUpLg from "../../assets/images/triangle_up_lg.svg";
+import triangleUpMd from "../../assets/images/triangle_up_md.svg";
+import triangleUpSm from "../../assets/images/triangle_up_sm.svg";
 import useWindowSize from "../../hooks/useWindowSize";
+import ButtonLink from "../Header/ButtonLink";
+import ContactSectionTitle from "./ContactSectionTitle";
 
 const ContactContainer = styled.section`
   padding: 48px 0 40px;
@@ -181,7 +181,7 @@ const selectTriangleImage = (width, orientation = "up") => {
 const Contact = ({
   number,
   sectionTitle,
-  data: { text, contactBtnTxt, email },
+  data: { text, contactBtnTxt },
   links: { github, linkedin },
   ...rest
 }) => {
@@ -201,7 +201,9 @@ const Contact = ({
       <ContactInnerContainer>
         <NewContactSectionTitle number={number} title={sectionTitle} />
         <Text>{text}</Text>
-        <ContactButton href={`mailto:${email}`}>{contactBtnTxt}</ContactButton>
+        <ContactButton href={linkedin} target="_blank">
+          {contactBtnTxt}
+        </ContactButton>
         <LogoContainer>
           <Logo src={logo} alt="" />
         </LogoContainer>

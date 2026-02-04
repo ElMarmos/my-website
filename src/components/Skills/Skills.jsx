@@ -1,8 +1,8 @@
-import WebDevelopmentIcon from "../../assets/images/skill_web_devolopment.svg";
+import styled from "styled-components";
+import AWSIcon from "../../assets/images/skill_aws.svg";
 import FrontEndDevelopmentIcon from "../../assets/images/skill_front_end_development.svg";
 import OtherTechnologiesIcon from "../../assets/images/skill_other_technologies.svg";
-import DesignIcon from "../../assets/images/skill_design.svg";
-import styled from "styled-components";
+import WebDevelopmentIcon from "../../assets/images/skill_web_devolopment.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
 const SkillsContainer = styled.section`
@@ -104,9 +104,9 @@ const renderImage = (number) => {
     case 1:
       return <SkillImage src={FrontEndDevelopmentIcon} />;
     case 2:
-      return <SkillImage src={OtherTechnologiesIcon} />;
+      return <SkillImage src={AWSIcon} />;
     case 3:
-      return <SkillImage src={DesignIcon} />;
+      return <SkillImage src={OtherTechnologiesIcon} />;
     default:
       return <SkillImage src={WebDevelopmentIcon} />;
   }

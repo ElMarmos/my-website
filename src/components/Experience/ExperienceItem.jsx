@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import theme from "../../constants/theme";
+import theme from "../../data/theme";
 
 const COLORS = [
   theme.colors.red,
@@ -64,7 +64,7 @@ const Position = styled.p`
 `;
 
 const Company = styled.a`
-  color: ${(props) => COLORS[props.colorIdx]};
+  color: ${(props) => COLORS[props.$colorIdx]};
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
@@ -162,7 +162,7 @@ const ExperienceItem = ({
         <Company
           href={companyUrl}
           target="_blank"
-          colorIdx={index % COLORS.length}
+          $colorIdx={index % COLORS.length}
         >
           {company}
         </Company>
